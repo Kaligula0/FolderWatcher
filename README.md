@@ -6,7 +6,7 @@ Invented especially for GnuCash, which creates a lot of backup and log files in 
 
 # Example for GnuCash
 ### Scheduler - New Task ###
-Paste the path to GnuCash.exe into code of both triggers, e.g.:
+Paste the path to GnuCash.exe into code of both task triggers, e.g.:
 `and *[EventData[Data[@Name='NewProcessName'] and (Data='C:\Program Files (x86)\gnucash\bin\gnucash.exe')]]`
 and
 `and *[EventData[Data[@Name='ProcessName'] and (Data='C:\Program Files (x86)\gnucash\bin\gnucash.exe')]]`.

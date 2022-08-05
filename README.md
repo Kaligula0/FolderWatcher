@@ -2,9 +2,11 @@
 A PowerShell (Windows) script that watches folder for new files and archives them somewhere else.
 
 # Why?
-Invented especially for GnuCash, which creates a lot of backup and log files in the main file's directory during work.
+Invented primarily for Gnucash but works for any type of files or directory.
 
-# Example for GnuCash
+# Example (Gnucash) 
+GnuCash creates a lot of backup and log files in the directory of a file that user currently works on. This makes the directory clutter very quickly (depending on GnuCash settings).
+
 ### Scheduler - New Task ###
 Paste the path to GnuCash.exe into code of both task triggers, e.g.:
 `and *[EventData[Data[@Name='NewProcessName'] and (Data='C:\Program Files (x86)\gnucash\bin\gnucash.exe')]]`

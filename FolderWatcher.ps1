@@ -38,6 +38,8 @@
 # - action (pay attention to the "windowtitle eq" part, where it should be the same as $host.ui.RawUI.WindowTitle in SETTINGS below):
 #  cmd /c (FOR /F "tokens=1 USEBACKQ" %a IN (`tasklist /fi "imagename eq powershell.exe" /fo table /nh`) DO (if "%a"=="powershell.exe" (taskkill /im powershell.exe /fi "windowtitle eq Folder Watcher" & exit) else (start powershell.exe -file "C:\Path\To\FolderWatcher.ps1" & exit)))
 
+# SAVE THIS FILE WITH ANSI ENCODING
+
 # source of PowerShell code below:
 # https://superuser.com/questions/226828/
 
@@ -63,7 +65,7 @@ $action =
     $changetype = $event.SourceEventArgs.ChangeType
     Write-Host """$name"" was $changetype at $(get-date)."
     Write-Host "Moving that file..."
-	# TO DO: handle errors
+	# TO DO: handle file-moving errors
 	Move-Item "$path" "$archiveDir"
     Write-Host "  -> File ""$name"" moved to $archiveDir."
 }

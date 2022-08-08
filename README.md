@@ -1,5 +1,7 @@
 # FolderWatcher
-A PowerShell (Windows) script that watches folder for new files and archives them somewhere else.
+A PowerShell (Windows) script that watches folder for new files and archives (moves) them somewhere else.
+- Runs in console without user interaction, with predefined settings.
+- Can be set to start only while specified app is started (and stop when it stops), what makes this script 100% effortless for user – it starts/runs/stops in background. Instructions are embedded in file – they involve creating a new task in Scheduler which waits for the app to start/stop.
 
 # Why?
 Invented primarily for Gnucash but works for any type of files or directory.
